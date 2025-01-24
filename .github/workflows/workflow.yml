@@ -1,0 +1,15 @@
+name: Build and deploy
+on:
+  pull_request:
+  push:
+permissions:
+  contents: write
+jobs:
+  success:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3.0.0
+        with:
+          hugo-version: 0.73.0
+          extended: true
