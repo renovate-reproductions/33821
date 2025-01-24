@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>DanySK/renovate-config"
+  ]
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^(workflow-templates|\\.github\\/workflows)\\/[^/]+\\.[Yy][Aa]?[Mm][Ll]$",
+        "(^|\\/)action\\.[Yy][Aa]?[Mm][Ll]$"
+      ],
+      "matchStrings": [
+          "\\s+hugo-version:\\s+['\"]?(?<version>\\d+(\\.\\d+)*)['\"]?"
+      ],
+      "depNameTemplate": "hugo",
+      "currentValueTemplate": "v{{{version}}}",
+      "packageNameTemplate": "gohugoio/hugo",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver-coerced",
+      "pinDigests": false
+    }
+  ]
+}
