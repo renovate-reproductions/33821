@@ -17,8 +17,7 @@
       "currentValueTemplate": "v{{{version}}}",
       "packageNameTemplate": "gohugoio/hugo",
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "semver-coerced",
-      "pinDigests": false
+      "versioningTemplate": "semver-coerced"
     }
   ]
 }
