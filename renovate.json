@@ -14,7 +14,7 @@
           "\\s+hugo-version:\\s+['\"]?(?<version>\\d+(\\.\\d+)*)['\"]?"
       ],
       "depNameTemplate": "hugo",
-      "currentValueTemplate": "v{{{version}}}",
+      "currentValueTemplate": "{{{version}}}",
       "packageNameTemplate": "gohugoio/hugo",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver-coerced"
